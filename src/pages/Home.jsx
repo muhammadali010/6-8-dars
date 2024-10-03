@@ -15,8 +15,7 @@ const Home = () => {
       const fetchProducts = async () => {
         try {
           const response = await fetch('https://auth-rg69.onrender.com/api/products/all');
-          if (response) {
-            response.status == 200
+          if (response.status == 200) {
             const data = await response.json();
             setProducts(data);
           } else {

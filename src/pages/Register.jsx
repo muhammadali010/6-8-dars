@@ -45,8 +45,7 @@ const Register = () => {
       body: JSON.stringify(userData),
     })
       .then((response) => {
-        if (response) {
-      response.status == 200
+        if (response.status == 200) {
           return response.json();
         } 
       })

@@ -21,8 +21,7 @@ const Login = () => {
       body: JSON.stringify(loginData),
     })
       .then((response) => {
-        if (response) {
-            response.status == 200
+        if (response.status == 200) {
           return response.json();
         } else {
           throw new Error('Login failed');
